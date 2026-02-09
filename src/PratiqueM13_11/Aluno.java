@@ -1,5 +1,6 @@
 package PratiqueM13_11;
 
+
 public class Aluno {
 
     private String nome;
@@ -22,8 +23,12 @@ public class Aluno {
         return this.notas;
     }
 
-    public void setNotas(int nota, int index){
-        this.notas[index] = nota;
+    public void setNotas(int nota, int index) throws IllegalArgumentException {
+        if (nota >= 0 && nota <= 10){
+            this.notas[index] = nota;
+        } else {
+            throw new IllegalArgumentException("Nota não pode ser inferior a 0 e superior a 10.");
+        }
     }
 
     public double getMedia(){

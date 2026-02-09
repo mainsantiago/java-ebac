@@ -46,8 +46,6 @@ public class PratiqueM13_11 {
             System.out.println("\nMédia do Aluno: " + alunos[i].getMedia());
         }
 
-
-
         sc.close();
 
     }
